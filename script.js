@@ -1,45 +1,31 @@
-// Header scroll effect
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.style.padding = '0.5rem 2rem';
-        header.style.backgroundColor = 'rgba(45, 38, 84, 0.95)';
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+const nav = document.querySelector('nav');
+
+// Function to handle scroll events
+function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Determine scroll direction
+    if (scrollTop > lastScrollTop && scrollTop > 80) {
+        // Scrolling down & past the header height
+        header.classList.add('hide');
     } else {
-        header.style.padding = '1rem 2rem';
-        header.style.backgroundColor = 'var(--primary-color)';
+        // Scrolling up or at the top
+        header.classList.remove('hide');
     }
-});
+    
+    lastScrollTop = scrollTop;
+}
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Add fade-in animation to sections
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('section').forEach(section => {
-    section.classList.add('hidden');
-    observer.observe(section);
+// Add scroll event listener with throttling for better performance
+let ticking = false;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+        });
+        ticking = true;
+    }
 });

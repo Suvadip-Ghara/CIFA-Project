@@ -1,6 +1,6 @@
-# CIFA-Project
+# CABPCIFASM db
 
-Cloud-Based Murrel Gene Annotation Hub (CMGAH) - A Web Interface for Murrel Gene Expression
+Cabin Project CIFA Channa striata Omics database - A Web Interface for Murrel Gene Expression
 
 ## Description
 
