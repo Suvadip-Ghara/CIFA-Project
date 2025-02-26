@@ -9,6 +9,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: #fff;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #333;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.logo sup {
+    font-size: 2.5rem;
+    color: #666;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: #007bff;
+    background: rgba(0,123,255,0.1);
+}
+
+.register-btn {
+    background: #007bff;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #0056b3 !important;
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem 5%;
 }
 
 body {
@@ -18,11 +81,12 @@ body {
 }
 
 .cifa-logo {
-    height: 80px;
+    height: 100px;
     width: auto;
     display: block;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    object-fit: contain;
 }
 
 header {
@@ -121,65 +185,23 @@ nav a:hover {
 .hero-image {
     flex: 1;
     text-align: right;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 50%;
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.announcement {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+.hero-image img:hover {
+    transform: scale(1.02);
 }
 
-.announcement-content {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 1200px;
-}
 
-.announcement-icon {
-    font-size: 2rem;
-    color: #fff;
-}
-
-.announcement-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-}
-
-.announcement-title {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-.paper-title {
-    font-style: italic;
-}
-
-.view-paper-link {
-    color: #fff;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.3rem;
-    font-size: 0.9rem;
-}
-
-.view-paper-link:hover {
-    text-decoration: underline;
-}
 .features-section {
     padding: 4rem 5%;
     background: var(--light-bg);

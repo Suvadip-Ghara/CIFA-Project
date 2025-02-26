@@ -10,8 +10,8 @@
 </head>
 <body>
     <header>
-        <img src="CIFA Logo.png" alt="CIFA Logo" class="cifa-logo">
         <div class="logo">
+            <img src="CIFA Logo.png" alt="CIFA Logo" class="cifa-logo">
             <h1>CABPCIFASM<sup>db</sup></h1>
         </div>
         <nav>
@@ -19,7 +19,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#deg">DEG</a></li>
-                <li><a href="#ssr">SSR</a></li>
+                <li><a href="#datasets">Datasets</a></li>
                 <li><a href="#functional">Functional Search</a></li>
                 <li><a href="#pathway">Pathway</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -32,24 +32,13 @@
         <section id="hero">
             <div class="hero-content">
                 <h1>Cabin Project CIFA Channa striata Omics database</h1>
-                <p>A Web interface for all that murrel express</p>
+                <p>The CABIN Project – CIFA Channa Striata Omics Database is a comprehensive multi-omics resource integrating transcriptomics, metabolomics, and metagenomics data of Channa striata, focusing on genes associated with growth, reproduction, and disease resistance. It provides differential gene expression profiles, metabolic pathways, and gut microbiome composition to enhance understanding of physiological functions and health management in murrel. This database serves as a valuable tool for researchers and aquaculture scientists, facilitating genetic improvement, nutrigenomics applications, and disease management strategies in Channa striata aquaculture.</p>
             </div>
             <div class="hero-image">
+                <img src="hero.png" alt="Hero Image">
                 <img src="murrel-fish.jpg" alt="Murrel Fish">
             </div>
         </section>
-
-        <div class="announcement">
-            <div class="announcement-content">
-                <i class="fas fa-award announcement-icon"></i>
-                <div class="announcement-text">
-                    <span class="announcement-title">Congratulations!</span>
-                    <span class="announcement-details">Research Paper Published in International Journal "Frontier in Science"</span>
-                    <span class="paper-title">"LMTdb: A comprehensive transcriptome database for climate resilient little millet"</span>
-                    <a href="#" class="view-paper-link">Click to view paper <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
 
         <section id="about-species">
             <div class="content-wrapper">
@@ -63,47 +52,41 @@
             </div>
         </section>
 
-        <section id="features" class="features-section">
-            <div class="section-header">
-                <h2>Features</h2>
-                <p>Major components of CMGAH</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-content">
-                        <h3>Productive</h3>
-                        <p>Comprehensive data on growth-related genes, metabolic pathways, and factors influencing murrel fish productivity and development.</p>
-                    </div>
+        <section id="about-db">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>About Cabin Project CIFA Channa striata Omics database</h2>
+                    <p>Cloud-Based Murrel Gene Annotation Hub (CMGAH) is a repository of transcriptome data of murrel species. The database contains various information for transcriptome sequence, differentially expressed genes of various tissues under varying conditions. This database is based on cloud architecture, developed in ASP.NET MVC and SQL SERVER.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-content">
-                        <h3>Reproductive</h3>
-                        <p>Detailed information about genes and pathways involved in reproduction, breeding cycles, and reproductive development of murrel fish.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-content">
-                        <h3>Disease Associated Genes</h3>
-                        <p>Database of genes linked to various diseases and immune responses in murrel fish, supporting research in disease resistance and health management.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-content">
-                        <h3>Omics Datasets of Murrel</h3>
-                        <p>Integrated multi-omics data including genomics, transcriptomics, proteomics, and metabolomics information for comprehensive murrel research.</p>
-                    </div>
+                <div class="image-container">
+                    <img src="database-architecture.jpg" alt="Database Architecture">
                 </div>
             </div>
         </section>
 
-        <section id="about-db">
-            <div class="content-wrapper">
-                <div class="text-content">
-                    <h2>About Cloud-Based Murrel Gene Annotation Hub</h2>
-                    <p>Cloud-Based Murrel Gene Annotation Hub (CMGAH) is a repository of transcriptome data of murrel species. The database contains various information for transcriptome sequence, SSR markers and differentially expressed genes of various tissues under varying conditions. This database is based on cloud architecture, developed in ASP.NET MVC and SQL SERVER.</p>
+        <section id="features">
+            <h2>FEATURES</h2>
+            <h3>Major components of CMGAH</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="ssr-icon.png" alt="SSR">
+                    <h4>SSRs</h4>
+                    <p>A collection of Simple Sequence Repeat (SSR) markers identified across the murrel transcriptome, along with their forward and reverse primer sequences.</p>
                 </div>
-                <div class="image-container">
-                    <img src="database-architecture.jpg" alt="Database Architecture">
+                <div class="feature-card">
+                    <img src="deg-icon.png" alt="DEG">
+                    <h4>DEG</h4>
+                    <p>A collection of Differentially Expressed Genes (DEGs) identified from tissues including secondary leaf, flag leaf and panicle under control and drought stress conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="functional-icon.png" alt="Functional">
+                    <h4>Functional</h4>
+                    <p>A collection of all the transcripts of murrel from tissues, including secondary leaf, flag leaf and panicle under control and drought stress conditions obtained via RNA-Seq and assembly along with their functional annotations.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="pathway-icon.png" alt="Pathway">
+                    <h4>Pathway</h4>
+                    <p>A collection of biological pathways associated with murrel transcripts, providing insights into metabolic and regulatory networks.</p>
                 </div>
             </div>
         </section>
